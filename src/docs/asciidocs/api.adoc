@@ -10,3 +10,6 @@ include::{snippets}/testVytvorKnihu/http-request.adoc
 
 include::{snippets}/testVytvorKnihu/request-fields.adoc
 
+*HTTP RESPONSE*
+
+include::{snippets}/testVytvorKnihu/http-response.adoc
