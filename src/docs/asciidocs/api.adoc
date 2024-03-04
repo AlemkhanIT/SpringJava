@@ -6,10 +6,26 @@
 
 *HTTP REQUEST*
 
-include::{snippets}/testVytvorKnihu/http-request.adoc
+include::{snippets}/testVytvorKnihu/http-request.adoc[]
+include::{snippets}/testVytvorKnihu/request-fields.adoc[]
 
-include::{snippets}/testVytvorKnihu/request-fields.adoc
+
+include::{snippets}/testUpdateBook/http-request.adoc[]
+include::{snippets}/testUpdateBook/request-fields.adoc[]
+
+
+include::{snippets}/testDeleteBook/http-request.adoc[]
+
+
+include::{snippets}/testReadBook/http-request.adoc[]
+
+
+include::{snippets}/testListBooks/http-request.adoc[]
 
 *HTTP RESPONSE*
 
-include::{snippets}/testVytvorKnihu/http-response.adoc
+include::{snippets}/testVytvorKnihu/http-response.adoc[]
+include::{snippets}/testDeleteBook/http-response.adoc[]
+include::{snippets}/testListBooks/http-response.adoc[]
+include::{snippets}/testReadBook/http-response.adoc[]
+include::{snippets}/testUpdateBook/http-response.adoc[]
