@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import com.example.demo.service.BookDTO;
+import com.example.demo.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,10 +15,16 @@ public class BookController {
 
     public static final List<Book> books = new ArrayList<>();
 
+    @Autowired
+    BookService bookService;
     @PostMapping
-    public Book createBook(@RequestBody Book book) {
-        books.add(book);
-        return book;
+    public Long createBook(@RequestBody BookDTO book) {
+        return bookService.createBook(book);
+    }
+
+    @GetMapping("/{bookId}")
+    public BookDTO readBook(@PathVariable Long bookId) {
+        return bookService.getBook(bookId);
     }
 
     @GetMapping
@@ -26,14 +35,6 @@ public class BookController {
                     .collect(Collectors.toList());
         }
         return books;
-    }
-
-    @GetMapping("/{bookId}")
-    public Book readBook(@PathVariable Long bookId) {
-        return books.stream()
-                .filter(b -> b.getId().equals(bookId))
-                .findFirst()
-                .orElse(null);
     }
 
     @PutMapping("/{bookId}")
