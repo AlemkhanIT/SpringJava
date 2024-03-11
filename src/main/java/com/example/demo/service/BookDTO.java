@@ -1,5 +1,8 @@
 package com.example.demo.service;
 
+import lombok.Getter;
+
+@Getter
 public class BookDTO {
     public Long id;
     public String name;
@@ -7,18 +10,6 @@ public class BookDTO {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getAuthor() {
-        return this.author;
     }
 
     public void setName(String name) {
